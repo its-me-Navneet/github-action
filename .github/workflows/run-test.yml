@@ -31,6 +31,7 @@ jobs:
 
         - name: Run test
           run : npm test
+          working-directory: test-project
 
     deploy:
         needs: test 
@@ -52,5 +53,6 @@ jobs:
           working-directory: test-project
         - name: Deploy
           run: npm run build
+          working-directory: test-project
        
           
